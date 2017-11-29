@@ -26,6 +26,7 @@ $(document).ready(function() {
 	
 	$("#source").submit(function(event) {
 		event.preventDefault();
+		document.getElementById("heading").innerHTML = "";
 		document.getElementById("heading").innerHTML+=("Top Business Headlines");
 		document.getElementById("headlines").innerHTML = "";
 		$.ajax({
