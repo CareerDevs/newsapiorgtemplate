@@ -15,29 +15,24 @@ $(document).ready(function() {
 				console.log(data)
 				for (var i = 0; i < data.sources.length; i++) {
 					var source = document.createElement("OPTION");
-					source.getAttribute("value", data.sources[i].id);
+					source.setAttribute("value", data.sources[i].id);
 					source.innerHTML = data.sources[i].name;
 					document.getElementById("selection").appendChild(source);
 				}
 			}
 		}
 	});
-	// .done(function( data ) {
-	//     console.log( data );
-	//     console.log( data.status )
-	// });
+	
+	
 	$("#source").submit(function(event) {
 		event.preventDefault();
-		//alert(document.getElementById("selection").value);
-		var selectedNews = document.getElementById("selection").value;
+		document.getElementById("heading").innerHTML+=("Top Business Headlines");
+		document.getElementById("headlines").innerHTML = "";
 		$.ajax({
 			method: "GET",
 			url: "https://newsapi.org/v2/top-headlines",
 			data: {
-				category: "business",
-				country: "us",
-				language: "en",
-				apiKey: APIKEY
+				sources: document.getElementById("selection").value, apiKey: APIKEY
 			},
 			success: function(data) {
 				console.log(data);
@@ -46,14 +41,18 @@ $(document).ready(function() {
 						console.log(data.articles[i].title);
 						var headline = document.createElement("li");
 						headline.innerHTML = data.articles[i].title;
+						var description = document.createElement("p");
+						description.innerHTML = data.articles[i].description;
+						var url = document.createElement('a');
+						url.setAttribute('href', data.articles[i].url);
+						url.innerHTML = data.articles[i].url;
 						document.getElementById("headlines").appendChild(headline);
+						document.getElementById("headlines").appendChild(description);
+				        document.getElementById("headlines").appendChild(url);
+				
 					}
 				}
 			}
 		});
 	});
 });
-//  for (var i = 0; i < document.getElementById("selection").length; i++);
-//     var articleName = document.getElementById("selection").value;
-//     var article = document.getElementById("article");
-//     article.innerHTML = articleName;

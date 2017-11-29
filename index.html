@@ -3,7 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>NewsAPI V1</title>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"><!-- REQUIREMENTS
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">    
+	    <!-- REQUIREMENTS
         Page requires a key.js file with the following format
         var APIKEY = "apikey from newsapi.org" -->
 </head>
@@ -13,10 +15,16 @@
 			<div class="form-group">
 				<select id="selection">
 				</select>
-			</div><button class="btn btn-primary" type="submit">Submit</button>
+			</div><button class="btn btn-primary" type="submit">Get Top Headlines</button>
 		</form>
-		<ul id="headlines"></ul>
-	</div>
+		<h1 id="heading"></h1>
+		<!--<ul id="headlines">-->
+		<!--</ul>-->
+		
+	<ul id="headlines"></ul>
+	<p id="description"></p>
+	<p id="url"></p>
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 	</script> 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
