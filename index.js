@@ -50,6 +50,13 @@ $(document).ready(function() {
 						document.getElementById("headlines").appendChild(headline);
 						document.getElementById("headlines").appendChild(description);
 				        document.getElementById("headlines").appendChild(url);
+				        
+				        
+				        
+// 				        $('a').each(function()
+// {
+//     $(this).attr('title', $(this).text());
+// });
 				
 					}
 				}

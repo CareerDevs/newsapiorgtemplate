@@ -3,7 +3,7 @@
     border: dashed 2px #424E6F;
     padding: 2em;
     overflow: hidden;
-    font-size:calc(100% + 1vw)
+    font-size:calc(100% + 1vw);
 }
 
 .top {
@@ -20,6 +20,7 @@
 li {
     margin-bottom: 1em;
     color: #990000;
+    font-size: 1em;
 }
 
 #heading {
