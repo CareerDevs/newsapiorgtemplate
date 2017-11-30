@@ -40,20 +40,16 @@ $(document).ready(function() {
 				if (data.status === "ok") {
 					for (var i = 0; i < data.articles.length; i++) {
 						console.log(data.articles[i].title);
-						var headline = document.createElement("li");
-						headline.innerHTML = data.articles[i].title;
-						var description = document.createElement("p");
-						description.innerHTML = data.articles[i].description;
-						var url = document.createElement('a');
-						url.setAttribute('href', data.articles[i].url);
-						url.innerHTML = data.articles[i].url;
-						document.getElementById("headlines").appendChild(headline);
-						document.getElementById("headlines").appendChild(description);
-				        document.getElementById("headlines").appendChild(url);
-					}
-				}
+						
+						
+	
+  
+  }
+}
+					
+				
 			}
-		});
+		})
 	});
-});	
-// var a = document.createElement("a"); a.setAttribute("anything-you-want", "attr value")
+
+});
